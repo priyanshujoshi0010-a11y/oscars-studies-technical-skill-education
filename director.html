@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Director's Message | OSCARS Studies Technical & Skill Education</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"/>
+
+
+<style>
+/* ================= General ================= */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:"Poppins",sans-serif;
+}
+
+body{
+  background:#f4f7fc;
+  color:#333;
+}
+
+/* ================= Hero Header ================= */
+.header{
+  text-align:center;
+  padding:70px 20px;
+  background: linear-gradient(120deg,#0052D4,#4364F7,#6FB1FC);
+  color:#fff;
+  border-bottom-left-radius:100px;
+  border-bottom-right-radius:100px;
+  animation:fadeIn 1.2s ease-in-out;
+}
+
+.header h1{
+  font-size:42px;
+  font-weight:700;
+  letter-spacing:1px;
+  text-shadow:0 4px 20px rgba(0,0,0,0.25);
+}
+
+.header p{
+  max-width:650px;
+  margin:auto;
+  margin-top:10px;
+  font-size:15px;
+  opacity:.9;
+}
+
+/* ================= Container ================= */
+.container{
+  width:85%;
+  max-width:1000px;
+  margin:50px auto;
+  background:#fff;
+  padding:40px;
+  border-radius:15px;
+  box-shadow:0 15px 35px rgba(0,0,0,.12);
+  animation:slideUp 1.3s ease-in-out;
+}
+
+/* ================= Message Box ================= */
+.msg-box{
+  background:#f8faff;
+  border-left:6px solid #0059ff;
+  padding:30px;
+  border-radius:12px;
+  box-shadow:0 8px 25px rgba(0,0,0,.10);
+  transform:translateY(35px);
+  opacity:0;
+  transition:all .8s ease;
+}
+
+.msg-box.reveal{
+  transform:translateY(0);
+  opacity:1;
+}
+
+.msg-title{
+  font-size:26px;
+  font-weight:700;
+  color:#003ba7;
+  margin-bottom:20px;
+}
+
+/* ================= Text ================= */
+p{
+  font-size:15px;
+  line-height:1.8;
+  margin-bottom:18px;
+}
+
+/* ================= Signature ================= */
+.director-sign{
+  margin-top:25px;
+  font-size:18px;
+  font-weight:600;
+  color:#003ba7;
+  text-align:right;
+}
+
+/* ================= Animations ================= */
+@keyframes fadeIn{
+  from{opacity:0;}
+  to{opacity:1;}
+}
+
+@keyframes slideUp{
+  0%{opacity:0;transform:translateY(60px);}
+  100%{opacity:1;transform:translateY(0);}
+}
+
+/* ================= Responsive ================= */
+@media(max-width:768px){
+  .header h1{font-size:30px;}
+  .container{padding:25px;}
+  .msg-title{font-size:22px;}
+  p{font-size:14px;}
+}
+</style>
+</head>
+
+<body>
+
+<!-- ================= Header Section ================= -->
+<div class="header">
+    <h1>Director’s Message</h1>
+    <p>Shaping Skills, Building Futures — A Vision Toward Technical Excellence</p>
+</div>
+
+<!-- ================= Message Section ================= -->
+<div class="container">
+    <div class="msg-box" id="messageBlock">
+        <h2 class="msg-title">DIRECTOR’S MESSAGE</h2>
+
+        <p>
+            The Central and State Governments have taken major initiatives to enhance the skills 
+            of the youth. However, there is still a significant gap between the demand and supply 
+            of a skilled workforce.
+        </p>
+
+        <p>
+            With a rapidly growing young population, nearly 300 million individuals remain 
+            underemployed or unemployed, while industries continue to face a shortage of trained 
+            professionals.
+        </p>
+
+        <p>
+            This indicates the urgent need for practical skill development, industry-based 
+            training, and technical education that meets real market requirements.
+        </p>
+
+        <p>
+            At OSCARS Studies Technical & Skill Education, we aim to bridge this gap through 
+            quality learning, modern infrastructure, professional guidance, and practical exposure.
+        </p>
+
+        <p>
+            With dedication and commitment, OSCARS works to enhance analytical ability, develop 
+            confidence, polish skills, and prepare every student to become industry-ready.
+        </p>
+
+        <p>
+            We wish every learner a bright and successful future.
+        </p>
+
+        <div class="director-sign">
+            – Director, OSCARS Studies Technical & Skill Education
+        </div>
+    </div>
+</div>
+
+<script>
+// Scroll reveal animation
+const target = document.getElementById("messageBlock");
+
+const observer = new IntersectionObserver((entries)=>{
+    entries.forEach(entry=>{
+        if(entry.isIntersecting){
+            target.classList.add("reveal");
+        }
+    });
+}, {threshold:0.3});
+
+observer.observe(target);
+</script>
+
+</body>
+</html>

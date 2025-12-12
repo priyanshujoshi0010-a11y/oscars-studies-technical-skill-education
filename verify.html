@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Certificate Verification | Oscars Study</title>
+    <link rel="stylesheet" href="verify.css">
+</head>
+
+<body>
+
+<!-- Background + Overlay -->
+<div class="bg"></div>
+<div class="overlay"></div>
+
+<!-- Center Login Box -->
+<div class="login-wrapper">
+    <div class="login-box">
+
+        <!-- Left Illustration -->
+        <div class="left-side">
+            <img src="image/icon.jpeg" alt="Student Illustration">
+        </div>
+
+        <!-- Right Side Form -->
+        <div class="right-side">
+            <h2>Certificate Verification</h2>
+
+            <label>Roll Number</label>
+            <input type="text" id="roll" placeholder="Enter Roll Number">
+
+            <label>Certificate Number</label>
+            <input type="text" id="cert" placeholder="Enter Certificate Number">
+
+            <button onclick="verifyNow()">Verify Now</button>
+        </div>
+
+    </div>
+</div>
+
+<script src="verify.js"></script>
+</body>
+</html>
